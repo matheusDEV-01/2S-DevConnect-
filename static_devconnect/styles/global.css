@@ -1,0 +1,56 @@
+:root {
+    --cor-01: #000000;
+    --cor-02: #DE8458;
+    --cor-03: #ffff;
+    --cor-04: #FF7670;
+    --cor-05: #FFFFEE;
+
+    --borda: 1px solid var(--cor-01);
+    --borda-arrendondado: 2px;
+
+    --tamanho-fonte-lg: 20px;
+    --tamanho-fonte-md: 16px;
+    --tamanho-fonte-sm: 14px;
+
+}
+
+@font-face {
+    font-family: Gravitas One;
+    src: url(../fonts/Gravitas_One/GravitasOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Noto Sans;
+    src: url(../fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf),
+        url(../fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf);
+}
+
+/* SELETOR GLOBAL */
+* {
+    font-family: "Noto Sans", sens-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* o valor total do tamanho do elemento contan tanto com espacos interno/externo e as bordas*/
+}
+
+body {
+    background-color: var(--cor-03);
+}
+
+h1 {
+    position: absolute;
+    /*altera a posição  */
+    z-index: -1;
+    /**/
+    opacity: 0;
+    /**/
+}
+
+/*Formulario*/
+input{
+    width: 100%;
+    height: 35px;
+    border: var(--borda);
+    background-color: var(--cor-03);
+}
