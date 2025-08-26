@@ -54,3 +54,16 @@ input{
     border: var(--borda);
     background-color: var(--cor-03);
 }
+
+.Formulario-botao{
+    background-color: var(--cor-02);
+    border-right: var(--borda-arrendondado);
+    border: none;  /*Removendo a borda*/
+    height: 35px;
+    
+
+    color: var(--cor-01);
+    font-size: var(--tamanho-fonte-sm);
+    font-weight: 300;
+
+}

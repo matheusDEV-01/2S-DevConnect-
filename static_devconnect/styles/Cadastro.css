@@ -1,13 +1,12 @@
 main {
     width: 100%;
     min-height: 100vh;
-    /*Altura da  janela do meu dispositivo*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main>div {
+main > div {
     width: 90%;
     display: flex;
     gap: 15px;
@@ -16,7 +15,6 @@ main>div {
 
 }
 
-/*Formulario*/
 #Formulario {
     display: flex;
     justify-content: center;
@@ -25,17 +23,17 @@ main>div {
     justify-content: space-between;
     padding: 3%;
     gap: 20px;
+    color: var(--cor-04);
 }
 
-#cadastro {
+#Conecte-se {
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.estilo-formulario {
+.formulario-cadastro {
     border: var(--borda);
     width: 100%;
     max-width: 340px;
@@ -43,36 +41,36 @@ main>div {
 
 }
 
-#Formulario>div {
+#Formulario > div {
     width: 100%;
 
 }
 
-#Formulario>div>label {
+#Formulario > div > label {
     font-size: var(--tamanho-fonte-sm);
     color: var(--cor-01);
     font-weight: 300;
-    /*aumento ou diminui a espessura da fonte*/
     padding-bottom: 4px;
 }
 
-.Formulario-botao-azul {
+.Formulario-botao {
     width: 100%;
 }
 
-#Formulario>p {
-    text-transform: uppercase;
+#Formulario > p {
     font-size: var(--tamanho-fonte-sm);
     color: var(--cor-01);
+    display: flex;
+    font-weight: 200;
 }
 
-#Formulario>a,
-#cadastro>p>a {
+#Formulario > a,
+#Conecte-se > p > a {
     text-decoration: none;
     color: var(--cor-02);
 }
 
-#cadastro>p {
+#Conecte-se > p {
     font-size: var(--tamanho-fonte-sm);
 }
 
@@ -88,10 +86,20 @@ main>div {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    /* espaços em linhas e colunas*/
 }
 
 #secao-instalacacao img {
     width: 120px;
     height: 39px;
+}
+
+.file-upload {
+    display: inline-block;
+    padding: 6px 12px;   /* deixei menor */
+    background-color: var(--cor-02); /* cinza do botão */
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
 }
