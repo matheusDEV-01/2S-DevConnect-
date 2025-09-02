@@ -43,7 +43,7 @@
                 </a>
 
                 <a href="#">
-                    <img id="foto-perfil" src="../images/images (1).webp" alt="Foto de perfil">
+                    <img class="foto-perfil" src="../images/images (1).webp" alt="Foto de perfil">
                 </a>
 
 
@@ -107,27 +107,64 @@
             </section>
             <!-- Fim Storys -->
 
+            <!-- inicio cadastro publi -->
             <section id="cadastro-publi" class="estilo-formulario">
                 <h2>Publicação</h2>
                 <form action="">
-                    <textarea name="" id=""></textarea>
-                    <div>
+                    <textarea name="" id="" placeholder="Digite a descrição do post...."></textarea>
+                    <footer>
+
                         <div>
                             <label for="upload" class="file-upload">Faça upload da sua imagem aqui...</label>
                             <input type="file" id="upload" hidden>
                         </div>
 
-                        <button type="text" class="Formulario-botao">Entrar</button>
-
-                    </div>
+                        <button type="text" class="Formulario-botao">Postar</button>
+                    </footer>
 
                 </form>
 
             </section>
+            <!-- Fim cadastro publi -->
+
+            <section id="publicacoes">
+                <!-- Inicio card publicaçção -->
+                <article class="card-publi">
+
+                    <header>
+                        <a href="#">
+                            <img class="foto-perfil" src="../images/Felca.jpg" alt="">
+                            Felca
+                        </a>
+                    </header>
+
+                    <figure>
+                        <img class="imagem-publicacao" src="../images/hytalo.jpg" alt="">
 
 
+                        <figcaption class="descricao-publicacao">
+                            Felca
+                            <p>influenciador Hytalo Santos </p>
+                        </figcaption>
 
+                        <div class="interacoes-publicacao">
+                            <button>
+                                <img src="../images/icone-coracao-preto.svg" alt="">
+                            </button>
+                            <button>
+                                <img src="../images/icone-comentario-preto.svg" alt="">
+                            </button>
 
+                            <span>150 curtidas</span>
+
+                        </div>
+                    </figure>
+
+                    <button type="button">Ver mais comentario  </button>
+
+                </article>
+                <!-- Fim do card publicaçção -->
+            </section>
 
         </div>
 

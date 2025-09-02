@@ -32,7 +32,9 @@
     margin: 0;
     box-sizing: border-box;
     /* o valor total do tamanho do elemento contan tanto com espacos interno/externo e as bordas*/
+    outline-color: var(--cor-02);
 }
+
 
 body {
     background-color: var(--cor-03);
@@ -54,20 +56,21 @@ h1 {
     background-color: var(--cor-03);
 }
 
-input{
+input {
     width: 100%;
     height: 35px;
     border: var(--borda);
     background-color: var(--cor-03);
 }
 
-.Formulario-botao{
+.Formulario-botao {
     background-color: var(--cor-05);
     border-right: var(--borda-arrendondado);
-    border: none;  /*Removendo a borda*/
+    border: none;
+    /*Removendo a borda*/
     height: 35px;
     width: 242.69px;
-    
+
 
     color: var(--cor-01);
     font-size: var(--tamanho-fonte-sm);
@@ -77,30 +80,38 @@ input{
 
 .file-upload {
     display: inline-block;
-    padding: 6px 12px;   /* deixei menor */
-    background-color: var(--cor-02); /* cinza do botão */
+    padding: 5px;
+    /* deixei menor */
+    background-color: var(--cor-02);
+    /* cinza do botão */
     color: #000;
     cursor: pointer;
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 14px;
+    text-align: center;
+    border-radius: var(--borda-arrendondado);
+    width: 100%;
+    max-width: 300px;
+    min-height: 35px;
 }
 
 /*Cabeçalho*/
-#cabecalho{
-    width: 100%; /*100% da Janela de Visualização*/
+#cabecalho {
+    width: 100%;
+    /*100% da Janela de Visualização*/
     height: 80px;
-    background-color: var(--cor-03);
+    background-color: var(--cor-05);
     display: flex;
     justify-content: center;
-   /* align-items: center;*/
-   border-bottom: var(--borda);
-   /* border-width: 4px; */
+    /* align-items: center;*/
+    border-bottom: var(--borda);
+
 
 
 }
 
-#cabecalho > nav {
+#cabecalho>nav {
     width: 85%;
     max-width: 1440px;
     height: 100%;
@@ -108,28 +119,30 @@ input{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
-#logo-mobile{
-    display: none;  /*remove a exibição da imagem*/
+#logo-mobile {
+    display: none;
+    /*remove a exibição da imagem*/
 }
 
-.cabecalho-acoes{
+.cabecalho-acoes {
     display: flex;
     align-items: center;
     gap: 13px;
 }
 
-.cabecalho-acoes > a {
+.cabecalho-acoes>a {
     display: flex;
     align-items: center;
 }
 
-#foto-perfil{
+.foto-perfil {
     width: 40px;
     height: 40px;
-    object-fit: cover; /*redimensiona a foto*/
+    object-fit: cover;
+    /*redimensiona a foto*/
     object-position: center;
     border-radius: 50%;
 }
@@ -138,10 +151,12 @@ input{
 
 /* RESPONSIVO */
 @media only screen and (max-width: 485px) {
-    #logo-mobile{
-        display: initial; /*Volta o valor inicial de exibição*/
+    #logo-mobile {
+        display: initial;
+        /*Volta o valor inicial de exibição*/
     }
-    #logo-desktop{
+
+    #logo-desktop {
         display: none;
     }
 }
