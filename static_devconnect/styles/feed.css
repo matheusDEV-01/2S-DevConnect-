@@ -138,13 +138,15 @@ textarea {
 /* seção publicações */
 #publicacoes {
     width: 100%;
-    height: 600px;
+    border: 2px solid var(--cor-04); 
+    border-radius: 20px;
+    
 }
 
 .card-publi {
     width: 100%;
     /* height: 400px; */
-    background-color: var(--cor-03);
+    
     
 }
 
