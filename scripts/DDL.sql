@@ -7,8 +7,8 @@ USE db_Devconnect;
 
 CREATE TABLE tb_Usuario(
 	id				INT IDENTITY	(1,1) PRIMARY KEY,
-	nomeCompleto	NVARCHAR		(255) NOT NULL,
-	nomeDeUsuario	NVARCHAR		(20) UNIQUE NOT NULL,
+	nome_Completo	NVARCHAR		(255) NOT NULL,
+	nome_DeUsuario	NVARCHAR		(20) UNIQUE NOT NULL,
 	email			NVARCHAR		(255) UNIQUE NOT NULL,
 	senha			NVARCHAR		(50) NOT NULL,
 	fotoPerfilUrl	NVARCHAR		(255)
