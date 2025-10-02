@@ -1,33 +1,33 @@
 --DML
-USE db_devconnect;
 
-INSERT INTO tb_usuario (nome_completo, nome_usuario, email, senha, foto_perfil_url) 
+USE  db_Devconnect;
+
+INSERT INTO tb_Usuario (nomeCompleto, nomeDeUsuario, email, senha)
 VALUES 
-('Matheus Felix Coura', 'TTI-098', 'matheus9908@gmail.com', '1234', 'foto_perfil');
+('TTI', 'TTI01', 'TTI0212@gmail.com', '1937');
 
-SELECT * FROM tb_usuario;
-
-INSERT INTO tb_publicacao (descricao , imagem_url, data_publicacao, id_usuario) 
+INSERT INTO tb_Usuario (nomeCompleto, nomeDeUsuario, email, senha, fotoPerfilUrl)
 VALUES 
-('descricao', 'imagem', '2025-02-17', 1);
+('Matheus', 'opalaale', 'alexia@email.com', 'senai@134', NULL);
 
-SELECT * FROM tb_publicacao;
-
-INSERT INTO tb_curtida (id_usuario, id_publicacao) 
+INSERT INTO tb_Publicacao (descricao, imagemUrl, data_publicacao, id_usuario)
 VALUES 
-(1, 1);
+('Dexterz', 'https://foto.Aleatoria', '2025-12-30', 1);
 
-SELECT * FROM tb_curtida;
-
-INSERT INTO tb_comentario (id_usuario, id_publicacao, texto, data_comentario)
+INSERT INTO tb_Curtida (id_Usuario, id_Publicacao)
 VALUES 
-(1, 1, 'texto', '2025-02-17');
+(1, 8);
 
-SELECT * FROM tb_comentario;
-
-INSERT INTO tb_seguidor (id_usario_seguidor, id_usuarioseguir) 
+INSERT INTO tb_Comentarios (texto, dataComentario, id_Publicacao, id_Usuario)
 VALUES 
-(1, 1);
+('Nao gosto dessa serie ', '2025-10-02', 8, 3);
 
-SELECT * FROM tb_seguidor;
+INSERT INTO tb_Seguidor (id_Usuario_Seguir, id_Usuario_Seguido)
+VALUES 
+(1, 2);
 
+    SELECT * FROM tb_Usuario;
+	SELECT * FROM tb_Publicacao;
+	SELECT * FROM tb_Curtida;
+	SELECT * FROM tb_Comentarios;
+	SELECT * FROM tb_Seguidor;
