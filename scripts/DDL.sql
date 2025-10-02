@@ -52,7 +52,3 @@ CREATE TABLE tb_Seguidor(
 	SELECT * FROM tb_Curtida;
 	SELECT * FROM tb_Comentarios;
 	SELECT * FROM tb_Seguidor;
-
-	DROP TABLE tb_Publicacao
-	DROP TABLE tb_Curtida;
-	DROP TABLE tb_Comentarios
