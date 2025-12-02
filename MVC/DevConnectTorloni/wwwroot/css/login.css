@@ -1,0 +1,93 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    /*Altura da  janela do meu dispositivo*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main>div {
+    width: 90%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/*Formulario*/
+#Formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+    gap: 20px;
+}
+
+#cadastro {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.estilo-formulario {
+    max-width: 340px;
+}
+
+#Formulario>div {
+    width: 100%;
+
+}
+
+#Formulario>div>label {
+    font-size: var(--tamanho-fonte-sm);
+    color: var(--cor-01);
+    font-weight: 300;
+    /*aumento ou diminui a espessura da fonte*/
+    padding-bottom: 4px;
+}
+
+.Formulario-botao-azul {
+    width: 100%;
+}
+
+#Formulario>p {
+    text-transform: uppercase;
+    font-size: var(--tamanho-fonte-sm);
+    color: var(--cor-01);
+}
+
+#Formulario>a,
+#cadastro>p>a {
+    text-decoration: none;
+    color: var(--cor-02);
+}
+
+#cadastro>p {
+    font-size: var(--tamanho-fonte-sm);
+}
+
+
+.informacao-aplicativo {
+    font-size: var(--tamanho-fonte-sm);
+    font-weight: 700;
+    color: var(--cor-01);
+}
+
+#secao-instalacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* espaços em linhas e colunas*/
+}
+
+#secao-instalacacao img {
+    width: 120px;
+    height: 39px;
+}
