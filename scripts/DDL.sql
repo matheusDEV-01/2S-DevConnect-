@@ -42,7 +42,8 @@ CREATE TABLE tb_Comentarios(
 
 CREATE TABLE tb_Seguidor(                  
 	id_Usuario_Seguir INT NOT NULL,  
-	id_Usuario_Seguido INT NOT NULL,  
+	id_Usuario_Seguido INT NOT NULL, 
+	
 	PRIMARY KEY (id_Usuario_Seguir, id_Usuario_Seguido)
 );
 

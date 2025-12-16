@@ -32,7 +32,7 @@ VALUES
 
 INSERT INTO tb_Usuario (nomeCompleto, nomeDeUsuario, email, senha, fotoPerfilUrl)
 VALUES 
-('Matheus', 'opalaale', 'alexia@email.com', 'senai@134', NULL);
+('Matheus', 'opalaale', 'alexia@email.com', 'senai@134', 'https://foto.Matheus');
 
 INSERT INTO tb_Publicacao (descricao, imagemUrl, data_publicacao, id_usuario)
 VALUES 

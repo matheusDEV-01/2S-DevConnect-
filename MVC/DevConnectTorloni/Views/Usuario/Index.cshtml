@@ -1,54 +1,65 @@
- <h1>Tela principal Cadastro</h1>
- <link rel="stylesheet" href="~/css/Cadastro.css">
-    <main>
+@model DevConnectTorloni.Models.TbUsuario
+
+<link rel="stylesheet" href="~/css/Cadastro.css">
+
+<script defer>
+const UsuarioNovoCadastro = "@ViewBag.UsuarioNovoCadastrado";
+
+if (UsuarioNovoCadastro === "Nao cadastrado") {
+    alert("Usuario nao cadastrado! Tente novamente 🥲");
+}
+</script>
+
+
+<main>
+    <div>
+        <!--Formulario-->
+        <form id="Formulario" class="formulario-cadastro" enctype="multipart/form-data" asp-controller="Usuario"
+            asp-action="Index">
+            <img src="../images/logo-devconnect-md.svg" alt="">
+
+            <label for="">Cadastre-se paracomunidade exclusivo de desenvolvedores(as).</label>
+
+
+            <div>
+                <label for="">Nome e Sobrenome:</label>
+                <input type="text" asp-for="NomeCompleto">
+            </div>
+
+            <div>
+                <label for="">Nome de usuário:</label>
+                <input type="text" asp-for="NomeDeUsuario" />
+            </div>
+
+            <div>
+                <label for="">E-mail:</label>
+                <input type="text" asp-for="Email">
+            </div>
+
+            <div>
+                <label for="">Senha:</label>
+                <input type="password" asp-for="Senha">
+            </div>
+
+            <div>
+                <label for="upload" class="file-upload">Faça upload da sua imagem aqui...</label>
+                <input type="file" id="upload" hidden name="imagem">
+            </div>
+
+            <button type="text" class="Formulario-botao">Cadastrar-se</button>
+
+            <p>Ao se cadastrar, você concorda com nossos Termos, Politico de Dados e Politica de Cookies</p>
+
+
+
+        </form>
+
+        <!--seção cadastro-->
+        <section id="Conecte-se" class="formulario-cadastro">
+
+            <p>Tem uma conta?<a asp-controller="Home" asp-action="Index">Conecte-se</a> </p>
+
+
+        </section>
         <div>
-            <!--Formulario-->
-            <form id="Formulario" class="formulario-cadastro">
-                <img src="../images/logo-devconnect-md.svg" alt="">
-
-                <label for="">Cadastre-se paracomunidade exclusivo de desenvolvedores(as).</label>
-
-
-                <div>
-                    <label for="">Nome e Sobrenome:</label>
-                    <input type="text" name="" id="">
-                </div>
-
-                <div>
-                    <label for="">Nome de usuário:</label>
-                    <input type="text" name="" id="">
-                </div>
-
-                <div>
-                    <label for="">E-mail:</label>
-                    <input type="text" name="" id="">
-                </div>
-
-                <div>
-                    <label for="">Senha:</label>
-                    <input type="password" name="" id="">
-                </div>
-
-                <div>
-                    <label for="upload" class="file-upload">Faça upload da sua imagem aqui...</label>
-                    <input type="file" id="upload" hidden>
-                </div>
-
-                <button type="text" class="Formulario-botao">Cadastrar-se</button>
-
-                <p>Ao se cadastrar, você concorda com nossos Termos, Politico de Dados e Politica de Cookies</p>
-
-
-
-            </form>
-
-            <!--seção cadastro-->
-            <section id="Conecte-se" class="formulario-cadastro">
-
-                <p>Tem uma conta?<a href="../pages/index.html">Conecte-se</a> </p>
-
-
-            </section>
-         <div>
-
-    <main>
+            <main>

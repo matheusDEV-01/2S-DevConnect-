@@ -1,151 +1,197 @@
+@using Microsoft.Identity.Client;
+@using DevConnectTorloni.Controllers;
+@using Microsoft.IdentityModel.Tokens
+@model List<DevConnectTorloni.Models.TbPublicacao>
+
+
+
+<link rel="stylesheet" href="~/css/feed.css">
 <h1>Tela Feed - DevConnect</h1>
-    <!-- Inicio Header -->
-    <header id="cabecalho">
-        <nav>
-            <a id="logo-desktop" href="../pages/feed.html">
-                <img src="../images/logo-devconnect-md.svg" alt="Logo da empresa">
+
+<script defer>
+    const PublicacaoCadastrada = "@ViewBag.PublicacaoCadastrada";
+
+    if (PublicacaoCadastrada == "Nao cadastrado") {
+        alert("Usuario nao cadastrado! Tente novamente 🥲");
+    }
+    else if (PublicacaoCadastrada == "cadastrado") {
+        alert("Publicação realizada com sucesso 😎!");
+    }
+</script>
+
+
+<!-- Inicio Header -->
+<header id="cabecalho">
+    <nav>
+        <a id="logo-desktop" asp-controller="Home" asp-action="Index">
+            <img src="../images/logo-devconnect-md.svg" alt="Logo da empresa">
+        </a>
+
+        <a id="logo-mobile" href="../pages/feed.html">
+            <img src="../images/logo-devconnect-sm.svg" alt="Logo da empresa">
+        </a>
+
+        <!-- icones -->
+        <div class="cabecalho-acoes">
+
+            <a asp-controller="Home" asp-action="Index">
+                <img src="../images/Vector.svg" alt="">
             </a>
 
-            <a id="logo-mobile" href="../pages/feed.html">
-                <img src="../images/logo-devconnect-sm.svg" alt="Logo da empresa">
+            <a href="#">
+                <img src="../images/Vector 1.svg" alt="">
             </a>
 
-            <!-- icones -->
-            <div class="cabecalho-acoes">
+            <a asp-controller="Usuario" asp-action="Perfil">
+                <img class="foto-perfil" src="../images/images (1).webp" alt="Foto de perfil">
+            </a>
 
-                <a href="./feed.html">
-                    <img src="../images/Vector.svg" alt="">
-                </a>
-
-                <a href="#">
-                    <img src="../images/Vector 1.svg" alt="">
-                </a>
-
-                <a href="#">
-                    <img class="foto-perfil" src="../images/images (1).webp" alt="Foto de perfil">
-                </a>
-
-
-            </div>
-        </nav>
-    </header>
-    <!-- Inicio Main -->
-    <main>
-        <div class="container-flex-publi">
-            <!-- Inicio Storys -->
-            <section id="storys" class="estilo-formulario">
-                <article class="card-story">
-                    <a href="#">
-                        <img src="../images/Felca.jpg" alt="foto de perfil">
-                        <span>Felca</span>
-                    </a>
-                </article>
-
-                <article class="card-story">
-                    <a href="#">
-                        <img src="../images/calleri.jpg" alt="foto de perfil">
-                        <span>Calleri</span>
-                    </a>
-                </article>
-
-                <article class="card-story">
-                    <a href="#">
-                        <img src="../images/kamylinha.jpg" alt="foto de perfil">
-                        <span>kamylinha</span>
-                    </a>
-                </article>
-
-                <article class="card-story">
-                    <a href="#">
-                        <img src="../images/hytalo.jpg" alt="foto de perfil">
-                        <span>Hytalo</span>
-                    </a>
-                </article>
-
-                <article class="card-story">
-                    <a href="#">
-                        <img src="../images/lucas.webp" alt="foto de perfil">
-                        <span>Lucas</span>
-                    </a>
-                </article>
-
-                <article class="card-story">
-                    <a href="#">
-                        <img src="../images/Tapia.jpg" alt="foto de perfil">
-                        <span>Tapia</span>
-                    </a>
-                </article>
-
-                <article class="card-story">
-                    <a href="#">
-                        <img src="../images/rafael.jpg" alt="foto de perfil">
-                        <span>Rafael</span>
-                    </a>
-                </article>
-
-            </section>
-            <!-- Fim Storys -->
-
-            <!-- inicio cadastro publi -->
-            <section id="cadastro-publi" class="estilo-formulario">
-                <h2>Publicação</h2>
-                <form action="">
-                    <textarea name="" id="" placeholder="Digite a descrição do post...."></textarea>
-                    <footer>
-
-                        <div>
-                            <label for="upload" class="file-upload">Faça upload da sua imagem aqui...</label>
-                            <input type="file" id="upload" hidden>
-                        </div>
-
-                        <button type="text" class="Formulario-botao">Postar</button>
-                    </footer>
-
-                </form>
-
-            </section>
-            <!-- Fim cadastro publi -->
-
-            <section id="publicacoes">
-                <!-- Inicio card publicaçção -->
-                <article class="card-publi">
-
-                    <header>
-                        <a href="#">
-                            <img class="foto-perfil" src="../images/Felca.jpg" alt="">
-                            Felca
-                        </a>
-                    </header>
-
-                    <figure>
-                        <img class="imagem-publicacao" src="../images/hytalo.jpg" alt="">
-
-
-                        <figcaption class="descricao-publicacao">
-                            Felca
-                            <p>influenciador Hytalo Santos </p>
-                        </figcaption>
-
-                        <div class="interacoes-publicacao">
-                            <button>
-                                <img src="../images/icone-coracao-preto.svg" alt="">
-                            </button>
-                            <button>
-                                <img src="../images/icone-comentario-preto.svg" alt="">
-                            </button>
-
-                            <span>150 curtidas</span>
-
-                        </div>
-                    </figure>
-
-                    <button type="button">Ver mais comentario....  </button>
-
-                </article>
-                <!-- Fim do card publicaçção -->
-            </section>
 
         </div>
+    </nav>
+</header>
+<!-- Inicio Main -->
+<main>
+    <div class="container-flex-publi">
+        <!-- Inicio Storys -->
+        <section id="storys" class="estilo-formulario">
+            <article class="card-story">
+                <a href="#">
+                    <img src="../images/Felca.jpg" alt="foto de perfil">
+                    <span>Felca</span>
+                </a>
+            </article>
 
-    </main>
-    <!-- Fim Main -->
+            <article class="card-story">
+                <a href="#">
+                    <img src="../images/calleri.jpg" alt="foto de perfil">
+                    <span>Calleri</span>
+                </a>
+            </article>
+
+            <article class="card-story">
+                <a href="#">
+                    <img src="../images/kamylinha.jpg" alt="foto de perfil">
+                    <span>kamylinha</span>
+                </a>
+            </article>
+
+            <article class="card-story">
+                <a href="#">
+                    <img src="../images/hytalo.jpg" alt="foto de perfil">
+                    <span>Hytalo</span>
+                </a>
+            </article>
+
+            <article class="card-story">
+                <a href="#">
+                    <img src="../images/lucas.webp" alt="foto de perfil">
+                    <span>Lucas</span>
+                </a>
+            </article>
+
+            <article class="card-story">
+                <a href="#">
+                    <img src="../images/Tapia.jpg" alt="foto de perfil">
+                    <span>Tapia</span>
+                </a>
+            </article>
+
+            <article class="card-story">
+                <a href="#">
+                    <img src="../images/rafael.jpg" alt="foto de perfil">
+                    <span>Rafael</span>
+                </a>
+            </article>
+
+        </section>
+        <!-- Fim Storys -->
+
+        <!-- inicio cadastro publi -->
+        <section id="cadastro-publi" class="estilo-formulario">
+            <h2>Publicação</h2>
+            <form enctype="multipart/form-data" asp-controller="Feed" asp-action="Index">
+                <textarea name="Descricao" id="" placeholder="Digite a descrição do post...." required></textarea>
+                <footer>
+
+                    <div>
+                        <label for="upload" class="file-upload">Faça upload da sua imagem aqui...</label>
+                        <input type="file" id="upload" hidden name="imagem">
+                    </div>
+
+                    <button type="text" class="Formulario-botao">Postar</button>
+                </footer>
+
+            </form>
+
+        </section>
+        <!-- Fim cadastro publi -->
+
+        <section id="publicacoes">
+
+            @foreach (var publi in Model)
+            {
+                //Só irá mostrar publicações que possuem imagem
+                if(!publi.ImagemUrl.IsNullOrEmpty()){
+
+                 <article class="card-publi">
+                <header>
+                    <a href="#">
+                        <img class="foto-perfil" src="../images/@publi.IdUsuarioNavigation?.FotoPerfilUrl" alt="foto de perfil">
+                       
+                       lindo
+                        
+                    </a>
+                </header>
+
+                <figure>
+                    <img class="imagem-publicacao" src="~/images/@publi.ImagemUrl" alt="">
+
+                   <figcaption class="descricao-publicacao">
+                    
+                    <p>@publi.Descricao</p>
+                   </figcaption>
+
+                   <div class="interacoes-publicacao">
+                    <button>
+                        <img src="../images/icone-coracao-preto.svg" alt="">
+                    </button>
+
+                    <button>
+                        <img src="../images/icone-comentario-preto.svg" alt="">
+                    </button>
+
+                     <span>
+                        197 mil curtidas
+                     </span>
+
+                   </div>
+
+                </figure>
+
+                <button type="button">Ver mais comentários...</button>
+                 
+            </article>
+
+                    <!-- Fim do card publicaçção -->
+                }
+                //Só irá mostrar publicações que não possuem imagem
+
+                else
+                {
+
+
+                }
+
+
+
+
+
+            }
+
+        </section>
+
+    </div>
+
+</main>
+<!-- Fim Main -->
